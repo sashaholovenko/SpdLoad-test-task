@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Syne'), url('../../../') format('woff');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+* button {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.slick-slider button {
+  /*display: none !important;*/
+}
+
+
+.slick-dots {
+  bottom: 0;
+  top: 52%;
+  left: -40px;
+  & > li {
+    & > button {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      cursor: pointer;
+      position: relative;
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+.slick-active {
+  &::after {
+    content: "";
+    top: 6px;
+    left: 6px;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+  }
+}
+
+
+.slick-next:before {
+  display: none;
+}
+
+.slick-next button {
+  display: none;
+}
+
+.slick-arrow {
+  display: none !important;
+}
