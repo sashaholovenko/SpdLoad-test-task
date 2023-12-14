@@ -10,6 +10,5 @@ export interface Tour {
 }
 export interface TourItemProps{
     tour: Tour,
-    page: string
     index: number
 }

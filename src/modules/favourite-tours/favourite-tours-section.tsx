@@ -17,7 +17,7 @@ const FavouriteToursSection = () => {
             </ClearButtonWrapper>
             <ToursItemsSection length={favouriteTours.length}>
                 {favouriteTours.map((tour: Tour, index: number) => (
-                    <TourItem key={tour.id} tour={tour} page={"fav"} index={index}/>
+                    <TourItem key={tour.id} tour={tour} index={index}/>
                 ) )}
             </ToursItemsSection>
         </Wrapper>

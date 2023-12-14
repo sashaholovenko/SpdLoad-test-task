@@ -87,6 +87,9 @@ const HeaderLinks = styled.div`
   }
   
 `
+interface FavouritesButtonProps {
+    url: string
+}
 const FavouritesButton = styled.button<FavouritesButtonProps>`
   display: flex;
   width: 53px;
@@ -127,7 +130,5 @@ const SignInText = styled.div`
   text-transform: uppercase;
 `
 
-interface FavouritesButtonProps {
-    url: string
-}
+
 export default Header;

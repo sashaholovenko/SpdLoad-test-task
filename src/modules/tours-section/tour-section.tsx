@@ -71,7 +71,7 @@ const TourSection = ({myRef}: TourSectionProps) => {
             </TitleWrapper>
             <ToursItemsSection length={tourListUpdated.length} >
                 {tourListUpdated.map((tour: Tour, index: number) => (
-                    <TourItem key={tour.id} tour={tour} page="home" index={(itemPosition + index) % toursList.length} />
+                    <TourItem key={tour.id} tour={tour} index={(itemPosition + index) % toursList.length} />
                 ))}
             </ToursItemsSection>
             <NavigationDotsWrapper>

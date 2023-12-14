@@ -7,14 +7,15 @@ import backet from "../../assets/Delete.svg"
 import {useRecoilState} from "recoil";
 import {toursFavourite} from "../../store";
 import {Tour, TourItemProps} from "../../types";
+import {useLocation} from "react-router-dom";
 
 
-const TourItem = ({tour, page, index}: TourItemProps) => {
+const TourItem = ({tour, index}: TourItemProps) => {
 
     const [favoriteTours, setFavoriteTours] = useRecoilState<Tour[]>(toursFavourite);
-
+    const location = useLocation();
     const addFavouriteTourHandler = (id?: string) => {
-        if ( page === 'home') {
+        if ( location.pathname === '/') {
             if (!favoriteTours.includes(tour) && tour) {
                 setFavoriteTours([...favoriteTours, tour])
             }
@@ -49,7 +50,7 @@ const TourItem = ({tour, page, index}: TourItemProps) => {
                     buy
                 </BuyButton>
                 <ActionButton onClick={() => addFavouriteTourHandler(tour.id)}>
-                    { page === 'home'
+                    { location.pathname === '/'
                         ?
                         <img src={heart} alt=""/>
                         :
